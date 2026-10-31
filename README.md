@@ -6,7 +6,7 @@
 # Filament Dedupler Uploader: DRY for your Storage 
 ### One file to link them all
 
-> **The Filament plugin for deduplicated file storing**, powered by [`maxkhim/laravel-storage-dedupler`](https://github.com/maxkhim/laravel-storage-dedupler) and [`Filament FileUpload component`](https://filamentphp.com/docs/5.x/forms/file-upload)
+> **Deduplicate file storing plugin for Filament**, powered by [`maxkhim/laravel-storage-dedupler`](https://github.com/maxkhim/laravel-storage-dedupler) and [`Filament FileUpload component`](https://filamentphp.com/docs/5.x/forms/file-upload)
 
 ## Overview
 
