@@ -11,7 +11,7 @@
 ## Overview
 
 `filament-dedupler-uploader` is plugin for Filament that prevents duplicate file storage by detecting files with identical content before saving them to storage. 
-Instead of storing multiple copies of the same file, it uses content-based hashing (SHA1) to ensure each unique file is stored only once — regardless of how many times or by whom it is uploaded.
+Instead of storing multiple copies of the same file, it uses content-based hashing (SHA1) to ensure each unique file is stored only once - regardless of how many times or by whom it is uploaded.
 
 This is especially useful for applications where users frequently upload the same documents, images, or other files, helping to:
 
@@ -21,11 +21,11 @@ This is especially useful for applications where users frequently upload the sam
 
 ### Key Features
 
-- 🔍 **Automatic deduplication** — Files are compared by SHA1 hash before storage
-- 📦 **Seamless integration** — Based on Filament's `FileUpload` component
-- 🔗 **Smart relationships** — Attaches `UniqueFile` records to Eloquent models via the `Deduplable` trait
-- 📋 **Infolist components** — Display uploaded files with metadata (original name, size, SHA1 hash, download)
-- 🗂️ **Multiple file support** — Handles single and multiple file uploads
+- 🔍 **Automatic deduplication** - Files are compared by SHA1 hash before storage
+- 📦 **Seamless integration** - Based on Filament's `FileUpload` component
+- 🔗 **Smart relationships** - Attaches `UniqueFile` records to Eloquent models via the `Deduplable` trait
+- 📋 **Infolist components** - Display uploaded files with metadata (original name, size, SHA1 hash, download)
+- 🗂️ **Multiple file support** - Handles single and multiple file uploads
 
 ## Requirements
 
@@ -114,9 +114,9 @@ public function infolist(Infolist $infolist): Infolist
 
 1. **User uploads a file** in the Filament form and saves record
 2. **SHA1 hash is computed** from the file content
-3. **Deduplication check** — If a file with the same hash already exists in storage, it is reused instead of being saved again
-4. **Relationship attachment** — The polymorphic `uniqueFiles` record attribute is attached to the model via the `Deduplable` trait
-5. **Form submission** — The file path and SHA1 hash is stored in the database
+3. **Deduplication check** - If a file with the same hash already exists in storage, it is reused instead of being saved again
+4. **Relationship attachment** - The polymorphic `uniqueFiles` record attribute is attached to the model via the `Deduplable` trait
+5. **Form submission** - The file path and SHA1 hash is stored in the database
 
 ### Deletion Behavior
 
