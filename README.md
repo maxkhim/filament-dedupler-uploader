@@ -5,8 +5,6 @@
 
 # Dedupler Uploader: DRY for your Storage 
 
-![dedupler-banner.jpg](dedupler-banner.jpg)
-
 ## Overview
 
 `filament-dedupler-uploader` is plugin for Filament that prevents duplicate file storage by detecting files with identical content before saving them to storage. 
