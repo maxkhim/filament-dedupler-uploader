@@ -31,11 +31,8 @@ This is especially useful for applications where users frequently upload the sam
 - PHP 8.1+
 - Laravel 12+
 - Filament 5.x
-- [`maxkhim/laravel-storage-dedupler`](https://github.com/maxkhim/laravel-storage-dedupler) ^1.0
 
 ## 🚀 Quick Start
-
-Get from zero to a working deduplicated upload in under two minutes.
 
 ### 1. Install the package
 
@@ -46,8 +43,6 @@ php artisan dedupler:check
 ```
 
 ### 2. Add the Plugin
-
-Add the plugin to your Filament panel in `PanelProvider`:
 
 ```php
 use Maxkhim\FilamentDeduplerUploader\FilamentDeduplerUploaderPlugin;
@@ -64,7 +59,7 @@ public function panel(Panel $panel): Panel
 
 ### 3. Prepare Your Model
 
-Your Eloquent model can the `Deduplable` trait from `laravel-storage-dedupler` for simplicity linking files:
+Your Eloquent model can use the `Deduplable` trait from `laravel-storage-dedupler` for simplicity linking files:
 
 ```php
 use Illuminate\Database\Eloquent\Model;
@@ -78,11 +73,7 @@ class Document extends Model
 }
 ```
 
-### 4. Use the File Upload Component
-
-Replace Filament's default `FileUpload` with `DeduplerFileUploader` in your form:
-
-#### Single File Upload
+### 4. Use the DeduplerFile Upload Component
 
 ```php
 use Maxkhim\FilamentDeduplerUploader\Forms\Components\DeduplerFileUploader;
@@ -94,11 +85,7 @@ DeduplerFileUploader::make('attachment')
 
 ### 5. Display Uploaded Files
 
-The package provides two infolist components for displaying uploaded files:
-
-#### DeduplerFilesRepeatableEntry (Table View)
-
-Displays files in a table with original name, size, download button, and SHA1 hash:
+Displays files in a table with original name, size, download button, and SHA1 hash, using standard Filament components:
 
 ```php
 use Maxkhim\FilamentDeduplerUploader\Infolists\DeduplerFilesRepeatableEntry;
