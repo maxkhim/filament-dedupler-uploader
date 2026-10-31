@@ -9,7 +9,7 @@
 
 ## Overview
 
-`filament-dedupler-uploader` is a Filament plugin that prevents duplicate file storage by detecting files with identical content before saving them to storage. 
+`filament-dedupler-uploader` is plugin for Filament that prevents duplicate file storage by detecting files with identical content before saving them to storage. 
 Instead of storing multiple copies of the same file, it uses content-based hashing (SHA1) to ensure each unique file is stored only once — regardless of how many times or by whom it is uploaded.
 
 This is especially useful for applications where users frequently upload the same documents, images, or other files, helping to:
@@ -112,16 +112,12 @@ public function infolist(Infolist $infolist): Infolist
 1. **User uploads a file** in the Filament form and saves record
 2. **SHA1 hash is computed** from the file content
 3. **Deduplication check** — If a file with the same hash already exists in storage, it is reused instead of being saved again
-4. **Relationship attachment** — The `UniqueFile` record is attached to the model via the `Deduplable` trait
-5. **Form submission** — The file path (hashed name) is stored in the database
+4. **Relationship attachment** — The polymorphic `uniqueFiles` record attribute is attached to the model via the `Deduplable` trait
+5. **Form submission** — The file path and SHA1 hash is stored in the database
 
 ### Deletion Behavior
 
 Physical file deletion is managed by the `laravel-storage-dedupler` package. When a file is removed from a model, the relationship is detached.
-
-## Credits
-
-- [Khimusov Maxim](https://github.com/maxkhim) — Author
 
 ## License
 
