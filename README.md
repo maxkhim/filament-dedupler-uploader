@@ -71,7 +71,7 @@ class Document extends Model
 }
 ```
 
-### 4. Use the DeduplerFile Upload Component
+### 4. Use the DeduplerFileUploader Component
 
 Based on Filament's `FileUpload` component
 
@@ -85,7 +85,7 @@ DeduplerFileUploader::make('attachment')
 
 ### 5. Display Uploaded Files
 
-Displays files in a table with original name, size, download button, and SHA1 hash, using standard Filament components:
+Displays files in a table with original name, size, download button, and SHA1 hash, using standard Filament components under hood:
 
 ```php
 use Maxkhim\FilamentDeduplerUploader\Infolists\DeduplerFilesRepeatableEntry;
