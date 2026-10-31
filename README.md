@@ -126,3 +126,6 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 ## Credits
 
 This package is built on top of [`maxkhim/laravel-storage-dedupler`](https://github.com/maxkhim/laravel-storage-dedupler).
+
+![dedupler-banner.jpg](dedupler-banner.jpg)
+
