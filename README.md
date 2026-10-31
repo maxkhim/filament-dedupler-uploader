@@ -1,4 +1,5 @@
-# Filament Dedupler Uploader: DRY for your Storage. One file to link them all.
+# Filament Dedupler Uploader: DRY for your Storage 
+### One file to link them all
 
 [![Latest Version](https://img.shields.io/packagist/v/maxkhim/filament-dedupler-uploader.svg?style=flat&label=Packagist&logo=packagist&logoColor=ffffff)](https://packagist.org/packages/maxkhim/filament-dedupler-uploader)
 [![Laravel](https://img.shields.io/badge/Laravel-12+-007ec6.svg?logo=laravel&logoColor=ffffff)](https://laravel.com)
