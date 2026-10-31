@@ -1,8 +1,10 @@
 # Filament Dedupler Uploader
 
-[![Latest Version](https://img.shields.io/github/release/maxkhim/filament-dedupler-uploader.svg?style=flat-square)](https://github.com/maxkhim/filament-dedupler-uploader/releases)
-[![Total Downloads](https://img.shields.io/packagist/dt/maxkhim/filament-dedupler-uploader.svg?style=flat-square)](https://packagist.org/packages/maxkhim/filament-dedupler-uploader)
-[![License](https://img.shields.io/packagist/l/maxkhim/filament-dedupler-uploader.svg?style=flat-square)](LICENSE.md)
+[![Latest Version](https://img.shields.io/packagist/v/maxkhim/filament-dedupler-uploader.svg?style=flat&label=Packagist&logo=packagist&logoColor=ffffff)](https://packagist.org/packages/maxkhim/filament-dedupler-uploader)
+[![Laravel](https://img.shields.io/badge/Laravel-12+-007ec6.svg?logo=laravel&logoColor=ffffff)](https://laravel.com)
+[![License](https://img.shields.io/packagist/l/maxkhim/filament-dedupler-uploader.svg?color=007ec6&label=License)](LICENSE.md)
+[![Filament](https://img.shields.io/badge/Filament-5-007ec6.svg?&logoColor=ffffff)](https://filamentphp.com)
+
 
 > **The Filament plugin for deduplicated file storing**, powered by [`maxkhim/laravel-storage-dedupler`](https://github.com/maxkhim/laravel-storage-dedupler).
 
