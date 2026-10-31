@@ -1,11 +1,11 @@
-# Filament Dedupler Uploader
+# Filament Dedupler Uploader - DRY (Don’t Repeat Yourself) for your storage
 
 [![Latest Version](https://img.shields.io/packagist/v/maxkhim/filament-dedupler-uploader.svg?style=flat&label=Packagist&logo=packagist&logoColor=ffffff)](https://packagist.org/packages/maxkhim/filament-dedupler-uploader)
 [![Laravel](https://img.shields.io/badge/Laravel-12+-007ec6.svg?logo=laravel&logoColor=ffffff)](https://laravel.com)
 [![License](https://img.shields.io/packagist/l/maxkhim/filament-dedupler-uploader.svg?color=007ec6&label=License)](LICENSE.md)
 [![Filament](https://img.shields.io/badge/Filament-5-007ec6.svg?&logoColor=ffffff)](https://filamentphp.com)
 
-> **The Filament plugin for deduplicated file storing**, powered by [`maxkhim/laravel-storage-dedupler`](https://github.com/maxkhim/laravel-storage-dedupler) and [`Filament FileUpload component`](https://filamentphp.com/docs/5.x/forms/file-upload).
+> **The Filament plugin for deduplicated file storing**, powered by [`maxkhim/laravel-storage-dedupler`](https://github.com/maxkhim/laravel-storage-dedupler) and [`Filament FileUpload component`](https://filamentphp.com/docs/5.x/forms/file-upload)
 
 ## Overview
 
