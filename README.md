@@ -20,7 +20,7 @@ This is especially useful for applications where users frequently upload the sam
 
 - 🔍 **Automatic deduplication** - Files are compared by SHA1 hash before storage
 - 📦 **Seamless integration** - Based on Filament's `FileUpload` component
-- 🔗 **Smart relationships** - Attaches `UniqueFile` records to Eloquent models via the `Deduplable` trait
+- 🔗 **Smart relationships** - Attaches `uniqueFiles` records to Eloquent models via the `Deduplable` trait
 - 📋 **Infolist components** - Display uploaded files with metadata (original name, size, SHA1 hash, download)
 - 🗂️ **Multiple file support** - Handles single and multiple file uploads
 
