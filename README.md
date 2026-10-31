@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/packagist/l/maxkhim/filament-dedupler-uploader.svg?color=007ec6&label=License)](LICENSE.md)
 [![Filament](https://img.shields.io/badge/Filament-5-007ec6.svg?&logoColor=ffffff)](https://filamentphp.com)
 
-# Filament Dedupler Uploader: DRY for your Storage 
+# Dedupler Uploader: DRY for your Storage 
 
 ## Overview
 
