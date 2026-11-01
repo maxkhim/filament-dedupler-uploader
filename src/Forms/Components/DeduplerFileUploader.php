@@ -18,7 +18,7 @@ class DeduplerFileUploader extends FileUpload
         parent::setUp();
 
         // Указываем диск, который использует dedupler (с фоллбеком на 'deduplicated')
-        $this->disk(config('dedupler.disk_default', 'deduplicated'));
+        $this->disk(config('dedupler.default_disk', 'deduplicated'));
 
         // Переопределяем сохранение файла (используем вынесенный метод)
         $this->saveUploadedFileUsing(function ($file) {
