@@ -119,6 +119,8 @@ public function infolist(Infolist $infolist): Infolist
 
 Physical file deletion is managed by the `laravel-storage-dedupler` package. When a file is removed from a model, the relationship is detached.
 
+![dedupler-banner.jpg](dedupler-banner.jpg)
+
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
@@ -126,6 +128,4 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 ## Credits
 
 This package is built on top of [`maxkhim/laravel-storage-dedupler`](https://github.com/maxkhim/laravel-storage-dedupler).
-
-![dedupler-banner.jpg](dedupler-banner.jpg)
 
