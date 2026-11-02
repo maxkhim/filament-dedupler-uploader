@@ -7,7 +7,7 @@
 
 ## Overview
 
-`filament-dedupler-uploader` is plugin for Filament that prevents duplicate file storage by detecting files with identical content before saving them to storage. 
+`filament-dedupler-uploader` is [plugin for Filament](https://filamentphp.com/plugins/maxkhim-dedupler-uploader) that prevents duplicate file storage by detecting files with identical content before saving them to storage. 
 Instead of storing multiple copies of the same file, it uses content-based hashing (SHA1) to ensure each unique file is stored only once - regardless of how many times or by whom it is uploaded.
 
 This is especially useful for applications where users frequently upload the same documents, images, or other files, helping to:
