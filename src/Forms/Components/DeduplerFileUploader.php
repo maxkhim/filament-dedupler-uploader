@@ -5,6 +5,7 @@ namespace Maxkhim\FilamentDeduplerUploader\Forms\Components;
 use Filament\Forms\Components\FileUpload;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\Storage;
 use Livewire\Features\SupportFileUploads\TemporaryUploadedFile;
 use Maxkhim\Dedupler\Facades\Dedupler;
 use Maxkhim\Dedupler\Models\UniqueFile;
@@ -13,12 +14,30 @@ use Maxkhim\Dedupler\Traits\Deduplable;
 class DeduplerFileUploader extends FileUpload
 {
     private static array $originalFileNames = [];
+    private static ?array $uploadedFiles = null;
+
     protected function setUp(): void
     {
         parent::setUp();
 
-        // Указываем диск, который использует dedupler (с фоллбеком на 'deduplicated')
         $this->disk(config('dedupler.default_disk', 'deduplicated'));
+        $this->previewable(false);
+        $this->getUploadedFileUsing(function (string $file) {
+            if (is_null(self::$uploadedFiles)) {
+                self::$uploadedFiles = ($this->getRecord()?->uniqueFileUploads?->pluck("original_name", "sha1_hash")->toArray()) ?? [];
+            }
+            $disk = config('dedupler.default_disk', 'deduplicated');
+            $size = null;
+            if (Storage::disk($disk)->exists($file)) {
+                $size = Storage::disk($disk)->size($file);
+            }
+            return [
+                'name' => (self::$uploadedFiles[pathinfo($file, PATHINFO_FILENAME)] ?? basename($file)),
+                'size' => $size,
+                'type' => Storage::disk($disk)->mimeType($file),
+                'url' =>  "#",
+            ];
+        });
 
         // Переопределяем сохранение файла (используем вынесенный метод)
         $this->saveUploadedFileUsing(function ($file) {
