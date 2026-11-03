@@ -22,11 +22,13 @@ class DeduplerFileUploader extends FileUpload
 
         $this->disk(config('dedupler.default_disk', 'deduplicated'));
         $this->previewable(false);
-        $this->getUploadedFileUsing(function (string $file) {
+
+        $this->getUploadedFileUsing(function ($file) {
+
             if (is_null(self::$uploadedFiles)) {
                 self::$uploadedFiles = ($this->getRecord()?->uniqueFileUploads?->pluck("original_name", "sha1_hash")->toArray()) ?? [];
             }
-            $disk = config('dedupler.default_disk', 'deduplicated');
+            $disk = $this->getDiskName();
             $size = null;
             if (Storage::disk($disk)->exists($file)) {
                 $size = Storage::disk($disk)->size($file);
@@ -106,7 +108,7 @@ class DeduplerFileUploader extends FileUpload
 
         if (blank($state)) {
             if ($this->getRecord()) {
-                $this->checkForDetach($state, $this->getRecord()?->toArray()["attachments"] ?? []);
+                $this->checkForDetach($state, $this->getRecord()?->toArray()[$this->getName()] ?? []);
             }
             return;
         }
@@ -128,7 +130,7 @@ class DeduplerFileUploader extends FileUpload
         $this->state($state);
 
         if ($this->getRecord()) {
-            $this->checkForDetach($state, $this->getRecord()?->toArray()["attachments"] ?? []);
+            $this->checkForDetach($state, $this->getRecord()?->toArray()[$this->getName()] ?? []);
         }
     }
 
