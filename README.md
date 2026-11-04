@@ -1,5 +1,9 @@
 <div class="filament-hidden">
 
+
+![dedupler-banner.jpg](dedupler-banner.jpg)
+
+
 [![Latest Version](https://img.shields.io/packagist/v/maxkhim/filament-dedupler-uploader.svg?style=flat&label=Packagist&logo=packagist&logoColor=ffffff)](https://packagist.org/packages/maxkhim/filament-dedupler-uploader)
 [![Laravel](https://img.shields.io/badge/Laravel-12+-007ec6.svg?logo=laravel&logoColor=ffffff)](https://laravel.com)
 [![License](https://img.shields.io/packagist/l/maxkhim/filament-dedupler-uploader.svg?color=007ec6&label=License)](LICENSE.md)
@@ -122,8 +126,6 @@ public function infolist(Infolist $infolist): Infolist
 ### Deletion Behavior
 
 Physical file deletion is managed by the `laravel-storage-dedupler` package. When a file is removed from a model, the relationship is detached.
-
-![dedupler-banner.jpg](dedupler-banner.jpg)
 
 ## License
 
