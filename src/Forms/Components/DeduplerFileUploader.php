@@ -92,6 +92,9 @@ class DeduplerFileUploader extends FileUpload
     private function checkForDetach($newFiles, $oldFiles) {
         $detachedFiles = [];
         foreach ($oldFiles as $oldFile) {
+            if (!$this->isMultiple() && !is_array($newFiles)) {
+                $newFiles = [$newFiles];
+            }
             if (!in_array($oldFile, $newFiles)) {
                 $detachedFiles[] = $oldFile;
             }
